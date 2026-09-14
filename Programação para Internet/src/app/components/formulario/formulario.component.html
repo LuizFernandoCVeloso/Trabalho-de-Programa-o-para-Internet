@@ -1,0 +1,61 @@
+<form id="formularioOrcamento">
+    <!-- Área para o nome -->
+    <div class="campo">
+        <label for="nome">Nome completo *</label>
+        <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+    </div>
+
+    <!--Área para o e-mail -->
+    <div class="campo">
+        <label for="email">E-mail *</label>
+        <input type="email" id="email" name="email" placeholder="exemplo@email.com" required>
+    </div>
+
+    <!-- Área para o telefone -->
+    <div class="campo">
+        <label for="telefone">Telefone *</label>
+        <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000" required>
+    </div>
+
+    <!-- Área para o modelo do veículo -->
+    <div class="campo">
+        <label for="veiculo">Veículo *</label>
+        <input type="text" id="veiculo" name="veiculo" placeholder="Ex.: Renault Kwid 2020" required>
+    </div>
+
+    <!-- Área para o escolher o serviço -->
+    <div class="campo">
+        <label for="servico">Serviço desejado *</label>
+        <select id="servico" name="servico" required>
+            <option value="">Qual serviço deseja?</option>
+            <option value="troca-oleo">Troca de óleo</option>
+            <option value="bateria">Bateria</option>
+            <option value="freios">Freios</option>
+            <option value="alinhamento">Alinhamento</option>
+            <option value="pneus">Pneus</option>
+            <option value="diagnostico">Diagnóstico</option>
+            <option value="outro">Outro</option>
+        </select>
+    </div>
+
+    <!-- Marcar uma data -->
+    <div class="campo">
+        <label for="data">Data desejada</label>
+        <input type="date" id="data" name="data">
+    </div>
+
+    <!-- Descrição do serviço requerido -->
+    <div class="campo campo-completo">
+        <label for="mensagem">
+            Descreva o problema ou Qual Serviço desejado
+        </label>
+        <textarea id="mensagem" name="mensagem" rows="5" placeholder="Descreva o que precisa ser feito no veículo..."></textarea>
+    </div>
+
+    <button type="submit" class="botao">
+        Enviar solicitação
+    </button>
+</form>
+
+<!-- Mensagem dinâmica do JavaScript -->
+<div id="mensagemSucesso" class="mensagem-sucesso"></div>

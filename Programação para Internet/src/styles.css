@@ -1,0 +1,401 @@
+
+/* ================================
+   CONFIGURAÇÕES GERAIS
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #050505; /* Evita vazamento de fundo branco no fim da página */
+    color: black;
+    line-height: 1.8;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+
+/* ================================
+   CABEÇALHO
+================================ */
+
+header {
+    background-color: rgba(10, 10, 10, 0.95);
+    backdrop-filter: blur(10px);
+    color: white;
+    padding: 12px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo h1 {
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+.logo span {
+    color: #e63946;
+}
+
+.logo h2 {
+    font-size: 12px;
+    font-weight: 400;
+    color: #ccc;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-top: -3px;
+}
+
+
+/* ================================
+   MENU
+================================ */
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+nav a {
+    color: #eee;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 15px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    color: #e63946;
+}
+
+.nav-cta {
+    background-color: #e63946;
+    color: white !important;
+    padding: 8px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+}
+
+.nav-cta:hover {
+    background-color: #d62828;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(230, 57, 70, 0.4);
+}
+
+
+/* ================================
+   banner
+================================ */
+
+.banner {
+    background:  url(assets/images/imagem2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;    
+
+      
+
+
+    min-height: calc(100vh - 85px); /* Faz o banner preencher o espaço restante da tela, cobrindo o fundo branco */
+
+    display: flex;
+    align-items: center;
+
+    color: #ffffff;
+    text-shadow: 1px 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+.banner-content {
+    display: flex;
+    align-items: center;
+}
+
+.banner h2 {
+    font-size: 44px;
+    margin-bottom: 15px;
+}
+
+.banner p {
+    max-width: 600px;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+
+/* ================================
+   BOTÕES
+================================ */
+
+.botao {
+    display: inline-block;
+
+    background-color: #e63946;
+    color: white;
+
+    border: none;
+    border-radius: 8px;
+
+    padding: 13px 25px;
+
+    text-decoration: none;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.botao:hover {
+    background-color: #d62828;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(214, 40, 40, 0.4);
+}
+
+/* ================================
+   BOTÃO FLUTUANTE (DESCIDA)
+================================ */
+.btn-flutuante {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 55px;
+    height: 55px;
+    background-color: #e63946;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    text-decoration: none;
+    box-shadow: 0 4px 15px rgba(230, 57, 70, 0.4);
+    z-index: 999;
+    transition: all 0.3s ease;
+}
+
+.btn-flutuante:hover {
+    transform: translateY(3px);
+    background-color: #d62828;
+    box-shadow: 0 6px 20px rgba(214, 40, 40, 0.6);
+}
+
+.btn-flutuante.escondido {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(20px);
+}
+
+
+/* ================================
+   SEÇÕES
+================================ */
+
+section {
+    scroll-margin-top: 85px; /* Compensa o menu fixo para as ancoras mostrarem o título */
+}
+
+.section {
+    padding: 70px 0;
+    background-color: white; /* Mantém as seções normais brancas */
+}
+
+.titulo {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.subtitulo {
+    text-align: center;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+
+/* ================================
+   SERVIÇOS
+================================ */
+
+.servicos-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.card {
+    background-color: white;
+
+    padding: 30px;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 3px 10px rgba(0, 0, 0, 0.1);
+
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    margin: 10px 0;
+}
+
+.icone {
+    font-size: 35px;
+}
+
+
+/* ================================
+   RODAPÉ / CONTATO
+================================ */
+
+footer {
+    background-color: #f4f5f7; /* Fundo claro e moderno para quebrar o peso da página */
+    color: #333;
+    padding: 80px 0 20px;
+    scroll-margin-top: 85px;
+    border-top: 1px solid #eaeaea;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr; /* Coluna da logo/descrição um pouco mais larga */
+    gap: 40px;
+    text-align: left; /* Alinhamento à esquerda fica muito mais premium */
+    margin-bottom: 60px;
+}
+
+.footer-grid h3 {
+    margin-bottom: 20px;
+    color: #111; /* Preto forte para contraste */
+    font-size: 15px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.footer-grid p {
+    color: #555;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.footer-brand p {
+    color: #666;
+}
+
+.footer-copyright {
+    text-align: center;
+    border-top: 1px solid #dddddd;
+    padding-top: 25px;
+    font-size: 13px;
+    color: #888;
+}
+
+
+/* ================================
+   RESPONSIVIDADE
+   TABLETS
+================================ */
+
+@media (max-width: 800px) {
+
+    .header-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav ul {
+        gap: 15px;
+    }
+
+    .servicos-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* ================================
+   RESPONSIVIDADE
+   CELULAR
+================================ */
+
+@media (max-width: 600px) {
+
+    .header-content {
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .banner {
+        min-height: 400px;
+        text-align: center;
+    }
+
+    .banner h2 {
+        font-size: 32px;
+    }
+
+    .banner p {
+        font-size: 16px;
+    }
+
+    .servicos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section {
+        padding: 50px 0;
+    }
+
+}
+

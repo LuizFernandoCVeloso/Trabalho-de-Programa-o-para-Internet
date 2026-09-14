@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Nome da pagina -->
+    <title>Oficina Serra | Serviços Automotivos</title> 
+
+    <!-- Linka o codigo do Style com o HTML -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="app/components/formulario/formulario.component.css">
+</head>
+
+<body>
+
+    <!-- Cabeçalho -->
+    <header>
+        <!--Tag div utilizada para criar elementos que podem ser trabalhados de forma separada -->
+        <div class="container header-content">
+
+            <div class="logo">
+                <h1>Oficina <span>Serra</span></h1> <!-- Titulo do cabeçalho-->
+                <h2><span>Serviços</span> Automotivos</h2>
+            </div>
+
+            <!-- Utilizando a tag "nav" para navegação dentro da pagina-->
+            <nav>
+                <!-- Utilizando lista lista não ordenada-->
+                <ul>
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#orcamento" class="nav-cta">Solicitar Orçamento</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <main>
+
+        <!-- Banner Inicial -->
+        <section id="inicio" class="banner">
+
+            <div class="container banner-content">
+
+                <div>
+                    <h2>Seu Carro em Boas Mãos</h2>
+                    <p>Serviços Automotivos Rapídos e de qualidade</p>
+                    <a href="#orcamento" class="botao"> <!--Botão de navegação para o orçamento-->
+                        Solicitar orçamento
+                    </a>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- SERVIÇOS -->
+        <section id="servicos" class="section">
+
+            <div class="container">
+
+                <h2 class="titulo">Nossos Serviços</h2>
+
+                <p class="subtitulo">
+                    Confira alguns dos principais serviços realizados pela
+                    Oficina Serra.
+                </p>
+
+                <div class="servicos-grid">
+                    <!-- Fio utilizado a tag "article" para criar cartões individuais  -->
+                    <article class="card">
+                        <div class="icone">🔧</div>
+                        <h3>Troca de óleo</h3>
+                        <p>
+                            Troca de óleo e filtros 
+                        </p>
+                    </article>
+
+                    <article class="card">
+                        <div class="icone">🔋</div>
+                        <h3>Bateria</h3>
+                        <p>
+                            Verificação, diagnóstico e substituição
+                            de baterias automotivas.
+                        </p>
+                    </article>
+
+                    <article class="card">
+                        <div class="icone">🚗</div>
+                        <h3>Sistema de Freios</h3>
+                        <p>
+                            Inspeção, Manutenção do sistema de freios
+                            do veículo, Troca de pastilhas, discos, fluidos e reparo de pinças
+                        </p>
+                    </article>
+
+                    <article class="card">
+                        <div class="icone">⚙️</div>
+                        <h3>Alinhamento</h3>
+                        <p>
+                            Serviços de alinhamento e verificação
+                            das rodas do veículo.
+                        </p>
+                    </article>
+
+                    <article class="card">
+                        <div class="icone">🚗</div>
+                        <h3>Pneus</h3>
+                        <p>
+                            Avaliação das condições dos pneus e serviços
+                            relacionados.
+                        </p>
+                    </article>
+
+                    <article class="card">
+                        <div class="icone">🔍</div>
+                        <h3>Diagnóstico</h3>
+                        <p>
+                            Avaliação do veículo para identificar possíveis
+                            problemas mecânicos e Manutenção Preventiva
+                        </p>
+                    </article>
+
+                    <article class="card">
+                        <div class="icone">🔧</div>
+                        <h3>Transmissão e Embreagem</h3>
+                        <p>
+                           Troca de embreagem, reparos de câmbio manual ou automático.
+                        </p>
+                    </article>
+
+                    <article class="card">
+                        <div class="icone">📋</div>
+                        <h3>Injeção Eletronica e Parte Eletrica</h3>
+                        <p>
+                            Passagem de scanner automotivo para leitura de falhas, 
+                            conserto de alternador, motor de arranque e troca de bateria.
+                        </p>
+                    </article>
+
+                    <article class="card">
+                        <div class="icone">🏎️</div>
+                        <h3>Suspensão e Direção</h3>
+                        <p>
+                            Troca de amortecedores, molas, buchas,
+                            alinhamento de direção e balanceamente das rodas
+                        </p>
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Formulário -->
+        <section id="orcamento" class="section formulario-section">
+
+            <div class="container">
+
+                <h2 class="titulo">Solicite um Orçamento</h2>
+
+                <p class="subtitulo">
+                    Preencha o formulário abaixo e envie sua solicitação.
+                </p>
+
+                <app-formulario></app-formulario>  <!-- aqui é injetado o form dinamicamente por causa do JS -->
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Rodapé e Contatos -->
+    <footer id="contato">
+
+        <div class="container">
+
+            <div class="footer-grid">
+                
+                <!-- Coluna 1: Marca e Sobre -->
+                <div class="footer-brand">
+                    <div class="logo">
+                        <h1 style="color: #111;">Oficina <span style="color: #e63946;">Serra</span></h1>
+                        <h2 style="color: #777;">Serviços Automotivos</h2>
+                    </div>
+                    <p style="margin-top: 15px;">Sua oficina mecânica de confiança. Especialistas em manter o seu carro sempre em perfeitas condições.</p>
+                </div>
+
+                <!-- Coluna 2: Endereço -->
+                <div>
+                    <h3>📍 Endereço</h3>
+                    <p>Rua das Flores, 123<br>Bairro Centro<br>Vitória - ES</p>
+                </div>
+                
+                <!-- Coluna 3: Contato -->
+                <div>
+                    <h3>📞 Contato</h3>
+                    <p><strong>Tel:</strong> (27) 99999-9999<br><strong>E-mail:</strong> OficinaSerraOficial@gmail.com</p>
+                </div>
+                
+                <!-- Coluna 4: Horário -->
+                <div>
+                    <h3>🕐 Funcionamento</h3>
+                    <p><strong>Seg - Sex:</strong> 08h às 18h<br><strong>Sábado:</strong> 08h às 12h<br><strong>Domingo:</strong> Fechado</p>
+                </div>
+
+            </div>
+
+            <div class="footer-copyright">
+                <p>&copy; 2026 Oficina Serra Automóveis. Todos os direitos reservados.</p>
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- Botão flutuante para descida -->
+    <a href="#servicos" class="btn-flutuante" title="Ir para Serviços">↓</a>
+
+    <!-- JAVASCRIPT -->
+    <script type="module" src="main.js"></script>
+
+</body>
+
+</html>
+```
